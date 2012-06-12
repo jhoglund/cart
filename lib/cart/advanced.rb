@@ -74,8 +74,8 @@ class Cart
     end
   end
 
-  def price
-    @items.map { |item| item.price }.inject(:+)
+  def total
+    @items.map { |item| item.price.monthly_tariff }.inject(:+)
   end
 
   def vat
